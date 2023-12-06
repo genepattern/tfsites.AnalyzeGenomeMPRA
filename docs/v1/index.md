@@ -1,4 +1,4 @@
-# tfsites.AnalyzePhenotypicGenotypes v1
+# tfsites.AnalyzeGiwas v1
 
 **Author(s):** Joe Solvason  
 
@@ -8,12 +8,12 @@
 
 **Task Type:** Transciption factor analysis
 
-**LSID:**  urn:lsid:genepattern.org:module.analysis:00445
+**LSID:**  urn:lsid:genepattern.org:module.analysis:00454
 
 
 ## Introduction
 
-tfsites.AnalyzePhenotypicGenotypes  finds all effects of SNVs from GWAS/eQTL data.
+tfsites.AnalyzeGwas finds all effects of SNVs from GWAS data..
 
 
 ## Functionality
@@ -39,7 +39,7 @@ TBD
 - **zero.position**<span style="color: red;">*</span>
     -  TRUE/FALSE, genomic coordinates are 0-indexed 
 - **mutations**<span style="color: red;">*</span>
-    - List of comma-seperated mutation effects to be analyzed or "all".
+    - List of comma-seperated mutation effects to be analyzed (e.g. "inc,del,denovo") or "all".
 - **out filename**<span style="color: red;">*</span>
     - Out file name for the annotated PBM data
 - **bed file**

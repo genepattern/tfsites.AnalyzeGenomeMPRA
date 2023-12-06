@@ -1,19 +1,19 @@
-#tfsites.AnalyzePhenotypicGenotypes
+#tfsites.AnalyzeGwas
 #Mon Aug 21 21:11:17 UTC 2023
 JVMLevel=
 LSID=
 author=
-commandLine=python /build/tfsites-webportal/1-annotateTfSites.py  -f <input.data> -i <IUPAC>  -o <out.filename> -p <normpbm> -g <genome> -z <zero.pos> <bed.file> <upper.threshold> <bottom.threshold> -m <mutations>       
+commandLine=python /build/tfsites-webportal/14-analyzeGwas/14-analyzeGwas.py  -f <input.data> -i <IUPAC>  -o <out.filename> -p <normpbm> -g <genome> -z <zero.pos> <bed.file> <upper.threshold> <bottom.threshold> -m <mutations>       
 cpuType=any
-description=Annotates all predicted transcription factor sites in a DNA sequence and report their affinity.\n\nhttps\://github.com/jsolvason/tfsites-webportal/blob/master/1-annotateTfSites-example.sh\n\n
-documentationUrl=https://genepattern.github.io/tfsites.AnalyzePhenotypicGenotypes/v1/
+description= finds all effects of SNVs from GWAS data
+documentationUrl=https://genepattern.github.io/tfsites.AnalyzeGwas/v1/
 fileFormat=
 job.cpuCount=
-job.docker.image=genepattern/tfsites\:0.2
+job.docker.image=genepattern/tfsites\:0.5
 job.memory=
 job.walltime=
 language=any
-name=tfsites.AnalyzePhenotypicGenotypes
+name=tfsites.AnalyzeGwas
 os=any
 p1_MODE=IN
 p1_TYPE=FILE
@@ -89,7 +89,7 @@ p5_value=FALSE\=FALSE;TRUE\=TRUE
 p6_MODE=
 p6_TYPE=TEXT
 p6_default_value=all
-p6_description= List of comma-separated mutation effects to be analyzed or "all".
+p6_description= List of comma-separated mutation effects to be analyzed (e.g. "inc,del,denovo") or "all".
 p6_fileFormat=
 p6_flag=
 p6_name=mutations

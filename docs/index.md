@@ -1,5 +1,5 @@
 
-# tfsites.AnalyzePhenotypicGenotypes Genepattern module docs pages root
+# tfsites.AnalyzeGwas Genepattern module docs pages root
 
 [v1 initial revision](v1/index.md)
 
