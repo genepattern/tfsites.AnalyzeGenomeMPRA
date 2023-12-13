@@ -1,0 +1,22 @@
+# Run this gpunit localy by calling:
+# ant -f ${GPUNIT_HOME}/build.xml -Dgpunit.diffStripTrailingCR="--strip-trailing-cr" -Dgp.host="127.0.0.1" -Dgp.url="http://127.0.0.1:8080" -Dgp.user="edjuaro@gmail.com" -Dgp.password="" -Dgpunit.testfolder=`pwd` gpunit
+# OR using gp-beta-ami:
+# ant -f ${GPUNIT_HOME}/build.xml -Dgpunit.diffStripTrailingCR="--strip-trailing-cr" -Dgp.host="beta.genepattern.org" -Dgp.url="https://beta.genepattern.org" -Dgp.user="**USERNAME**" -Dgp.password="**PUT_PASSWORD_HERE" -Dgpunit.testfolder=`pwd` gpunit
+
+#
+# Note: this test uses a custom diff command
+#
+
+name: "tfsites.AnalyzeGwas - Basic test"
+module: tfsites.AnalyzeGwas
+params:
+    input.data: "data/14-input_gwas.tsv"
+    normpbm: "data/14-input_ets-norm-pbm.tsv"
+    genome: "https://datasets.genepattern.org/data/module_support_files/tfsites/hg38-chr2seq-pydict.pkl"
+    IUPAC: "NNGGAWNN"
+    zero.pos: "FALSE"
+    mutations: "inc,del,denovo"
+    out.filename:  "14-output_ets-all-possible-muts.tsv"
+assertions:
+    jobStatus: success
+
