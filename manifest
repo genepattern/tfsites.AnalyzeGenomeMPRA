@@ -46,9 +46,10 @@ p2_value=
 
 p3_MODE=IN
 p3_TYPE=FILE
+p3_choiceDir=https://datasets.genepattern.org/data/module_support_files/tfsites/tfsites.genomes.json
 p3_default_value=
 p3_description=Genome as pickled file (output from tfsites.LoadGenome).
-p3_fileFormat=pickle
+p3_fileFormat=pickle,pkl
 p3_flag=
 p3_name=genome
 p3_numValues=1..1
@@ -56,7 +57,9 @@ p3_optional=
 p3_prefix=
 p3_prefix_when_specified=
 p3_type=java.io.File
-p3_value=
+
+
+
 p4_MODE=
 p4_TYPE=TEXT
 p4_default_value=NNGGAWNN
