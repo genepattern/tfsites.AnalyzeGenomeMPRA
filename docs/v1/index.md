@@ -20,16 +20,16 @@ This analysis is performed on one transcription factor. For any input BED files,
 ## Methodology
 
 For each SNV mutation in the input GWAS data, we determine its effect, if any, on any binding sites that exist in the reference genome. These are the possible effects of a SNV on a binding site: 
-- Inc
+- `inc`
     - The affinity of the binding site increases
     - The affinity fold change from the reference binding site to the alternate binding site is greater than 1
-- Dec
+- `dec`
     - The affinity of the binding site decreases
     - The affinity fold change from the reference binding site to the alternate binding site is less than 1
-- Denovo
+- `denovo`
     - A binding site is created
     - The reference binding site didn't follow the IUPAC definition, but the alternate binding site follows it 
-- Del
+- `del`
     - A binding site is deleted
     - The reference binding site followed the IUPAC definition, but the alternate binding site didn’t follow it
   
@@ -63,7 +63,7 @@ If input BED files are provided, the GWAS file is converted from TSV to BED form
     - If `True`, the genomic coordinates in the input GWAS file are 0-indexed (sequence numbering starts at 0). If `False`, they are 1-indexed (sequence numbering starts at 1).
 - **SNV Effect (string)**
     - `default = None`
-    - Specify one or more mutation types to analyze. SNV mutations can either increase (optimize) or decrease (sub-optimize) the affinity, delete a binding site, or create a binding site. Therefore, the possible mutation types are inc, dec, denovo, and del. This option also takes the value all if the user would like to analyze all of the listed mutation types.
+    - Specify one or more mutation types to analyze. SNV mutations can either increase (optimize) or decrease (sub-optimize) the affinity, delete a binding site, or create a binding site. Therefore, the possible mutation types are `inc`, `dec`, `denovo`, and `del`. This option also takes the value `all` if the user would like to analyze all of the listed mutation types.
 - **Optimization Threshold (float)**
     - `default = 1`
     - Affinity fold-change threshold for affinity-increasing mutations. Only SNVs with fold change above this threshold will be reported. By default, all SNVs will be reported.
