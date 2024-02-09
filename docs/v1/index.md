@@ -131,11 +131,11 @@ AAAAAACA        0.123
 ```
 chrom    pos      ref  alt  p_value   ref_kmer  alt_kmer   site_direction  ref_aff  alt_aff   fold_change   mut_type
 
-chr1     1255143  C    T    1.43e-08  GGCAAGG   GGGAAGG    -               NaN      0.120     NaN           denovo
-chr1     1258206  AT   A    1.24e-09  TTGGAAAC  CTGGAAAC   -               0.097    0.118     1.216         inc
-chr1     1259090  ACG  A    1.75e-08  GGGATTC   GAGGATTC   +               0.091    0.093     1.022         inc
-chr1     1259093  T    A    1.05e-08  CGGTAACA  CGGGAACA   -               NaN      0.130     NaN           denovo
-chr1     1259424  T    C    3.17e-09  GTGGAACT  GTGGAGCT   +               0.107    NaN       NaN           del
+chr1     1281643  G    C    1.53e-09  GGCAAGG   GGGAAGG    -               NaN      0.120     NaN           denovo
+chr1     1307327  A    G    3.93e-09  TTGGAAAC  CTGGAAAC   -               0.097    0.118     1.216         inc
+chr1     1309994  G    A    8.83e-11  GGGATTC   GAGGATTC   +               0.091    0.093     1.022         inc
+chr1     1325256  A    C    5.08e-10  CGGTAACA  CGGGAACA   -               NaN      0.130     NaN           denovo
+chr1     1337900  A    G    3.52e-12  GTGGAACT  GTGGAGCT   +               0.107    NaN       NaN           del
 ```
     
   
