@@ -10,13 +10,13 @@
 name: "tfsites.AnalyzeGwas - Basic test"
 module: tfsites.AnalyzeGwas
 params:
-    input.data: "data/14-input_gwas.tsv"
-    normpbm: "data/14-input_ets-norm-pbm.tsv"
-    genome: "https://datasets.genepattern.org/data/module_support_files/tfsites/hg38-chr2seq-pydict.pkl"
-    IUPAC: "NNGGAWNN"
+    GWAS.data.input: "data/14-input_gwas.tsv"
+    relative.affinity.PBM.data: "data/14-input_ets-norm-pbm.tsv"
+    reference.genome: "https://datasets.genepattern.org/data/module_support_files/tfsites/hg38-chr2seq-pydict.pkl"
+    IUPAC.definition: "NNGGAWNN"
     zero.pos: "FALSE"
-    mutations: "inc,del,denovo"
-    out.filename:  "14-output_ets-all-possible-muts.tsv"
+    SNV.effect: "inc,del,denovo"
+    SNV.effects.of.GWAS.data.filename:  "14-output_ets-all-possible-muts.tsv"
 assertions:
     jobStatus: success
 
