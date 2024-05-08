@@ -4,11 +4,11 @@
         "description": "",
         "hidden": false,
         "parameters": [
-            "GWAS.data.input",
-            "relative.affinity.PBM.data",
+            "MPRA.data",
+            "PBM/PWM.reference.data",
             "BED.genomic.interval.data",
 	    "reference.genome",
-	    "SNV.effects.of.GWAS.data.filename"
+	    "SNV.effects.of.MPRA.data.table.output.filename"
         ]
     },
     {
@@ -16,11 +16,11 @@
         "description": "",
         "hidden": false,
         "parameters": [
-            "IUPAC.definition",
-            "zero.index.genomic.coordinates",
-            "SNV.effect",
+            "binding.site.definition",
+            "zero-indexed.genomic.coordinates",
+            "SNV.effects.to.report",
             "optimization.threshold",
-            "sub-optimization.threshold"
+            "suboptimization.threshold"
         ]
     }
 
