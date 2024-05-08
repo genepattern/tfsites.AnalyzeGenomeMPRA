@@ -3,7 +3,7 @@
 JVMLevel=
 LSID=
 author=
-commandLine=python /build/tfsites-webportal/06-analyzeGenomeMPRA/06-analyzeGenomeMPRA.py  -m <MPRA.data> -r <PBM/PWM.reference.data> -d <binding.site.definition>  -t <SNV.effects.of.MPRA.data.table.output.filename>   -g <reference.genome> -z <zero-indexed.genomic.coordinates> <BED.genomic.interval.data> <optimization.threshold> <suboptimization.threshold> -m <SNV.effects.to.report>
+commandLine=python /build/tfsites-webportal/06-analyzeGenomeMPRA/06-analyzeGenomeMPRA.py  -m <MPRA.data> -r <PBM/PWM.reference.data> -d <binding.site.definition>  -t <SNV.effects.of.MPRA.data.table.output.filename>   -g <reference.genome> -z <zero-indexed.genomic.coordinates> <BED.genomic.interval.data> <optimization.threshold> <suboptimization.threshold>  <SNV.effects.to.report>
 cpuType=any
 description= finds all effects of SNVs from GWAS data
 documentationUrl=https://genepattern.github.io/tfsites.AnalyzeGwas/v1/
@@ -112,7 +112,7 @@ p7_name=SNV.effects.of.MPRA.data.table.output.filename
 p7_numValues=0..1
 p7_optional=
 p7_prefix=
-p7_prefix_when_specified=
+p7_prefix_when_specified=-e
 p7_type=java.lang.String
 p7_value=
 
