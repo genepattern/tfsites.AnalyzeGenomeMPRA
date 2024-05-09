@@ -104,7 +104,7 @@ p6_value=
 
 p7_MODE=
 p7_TYPE=TEXT
-p7_default_value=<GWAS.data.input_basename>_annotated.tsv
+p7_default_value=<MPRA.data_basename>_annotated.tsv
 p7_description=Name of the output file containing the original GWAS input file with appended columns containing information about the effect of each mutation.
 p7_fileFormat=
 p7_flag=
@@ -112,7 +112,7 @@ p7_name=SNV.effects.of.MPRA.data.table.output.filename
 p7_numValues=0..1
 p7_optional=
 p7_prefix=
-p7_prefix_when_specified=-e
+p7_prefix_when_specified= 
 p7_type=java.lang.String
 p7_value=
 
