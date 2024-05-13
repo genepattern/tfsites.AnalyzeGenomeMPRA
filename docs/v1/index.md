@@ -1,4 +1,4 @@
-# tfsites.AnalyzeGwas v1
+# tfsites.AnalyzeGenomeMPRA v1
 
 **Author(s):** Joe Solvason  
 
@@ -13,7 +13,7 @@
 
 ## Introduction
 
-`analyzeGwas` examines mutations from genome-wide association studies (GWAS) data and reports the effect of all the mutations that are single-nucleotide variants (SNVs). Possible mutation effects include increasing (or optimizing) the affinity of a binding site, decreasing (or sub-optimizing) the affinity of a binding site, deleting a binding site, or creating a binding site. 
+`analyzeGenomeMPRA` examines mutations from genome-wide association studies (GWAS) data and reports the effect of all the mutations that are single-nucleotide variants (SNVs). Possible mutation effects include increasing (or optimizing) the affinity of a binding site, decreasing (or sub-optimizing) the affinity of a binding site, deleting a binding site, or creating a binding site. 
 This analysis is performed on one transcription factor. For any input BED files, we will report whether overlap exists between the genomic intervals in each BED file and mutations from the GWAS data. 
 
 
@@ -44,30 +44,30 @@ If input BED files are provided, the GWAS file is converted from TSV to BED form
 
 ### Inputs and Outputs
 
-- <span style="color: red;">*</span>**GWAS Data Input (.tsv)**
-    - This file contains a list of mutations from a genome-wide association studies (GWAS) experiment, along with their genomic position. It can also contain other information, such as the statistical association between the mutation and phenotype. 
-- <span style="color: red;">*</span>**Relative Affinity PBM Data (.tsv)**
+- <span style="color: red;">*</span>**MPRA data (.tsv)**
+    - This file contains a list of mutations from a massively parallel reporter assay (MPRA) experiment, along with their genomic position. It can also contain other information, such as the statistical association between the mutation and phenotype. 
+- <span style="color: red;">*</span>**PBM or PFM reference data (.tsv)**
     - This file is the normalized PBM data file for a transcription factor obtained from `defineTfSites`. It contains the relative affinity for every possible k-mer.
-- **BED Genomic Interval Data (.bed)**
+- **BED genomic interval data (.bed)**
     - This file contains a list of genomic intervals of interest. 
-- <span style="color: red;">*</span>**Reference Genome (.pkl)**
-    - This file is the reference genome that corresponds to the genomic coordinates used in the input GWAS and BED files. 
-- <span style="color: red;">*</span>**SNV Effects of GWAS Data (.tsv)**
-    -  Name of the output file containing the original GWAS input file with appended columns containing information about the effect of each mutation.
+- <span style="color: red;">*</span>**reference genome (.pkl)**
+    - This file is the reference genome that corresponds to the genomic coordinates used in the input MPRA and BED files. 
+- <span style="color: red;">*</span>**SNV effects of MPRA data output filename(.tsv)**
+    -  Name of the output file containing the original MPRA input file with appended columns containing information about the effect of each mutation.
 
  ### Other Parameters
     
-- <span style="color: red;">*</span>**IUPAC Definition (string)**
+- <span style="color: red;">*</span>**binding site definition (string)**
     - IUPAC definition of core transcription factor binding site (see [here](https://www.bioinformatics.org/sms/iupac.html)).
-- <span style="color: red;">*</span>**Zero Index Genomic Coordinates (boolean)**
+- <span style="color: red;">*</span>**Zero-indexed Genomic Coordinates (boolean)**
     - If `True`, the genomic coordinates in the input GWAS file are 0-indexed (sequence numbering starts at 0). If `False`, they are 1-indexed (sequence numbering starts at 1).
-- **SNV Effect (string)**
+- **SNV effects to report (string)**
     - `default = None`
     - Specify one or more mutation types to analyze. SNV mutations can either increase (optimize) or decrease (sub-optimize) the affinity, delete a binding site, or create a binding site. Therefore, the possible mutation types are `inc`, `dec`, `denovo`, and `del`. This option also takes the value `all` if the user would like to analyze all of the listed mutation types.
-- **Optimization Threshold (float)**
+- **optimization threshold (float)**
     - `default = 1`
     - Affinity fold-change threshold for affinity-increasing mutations. Only SNVs with fold change above this threshold will be reported. By default, all SNVs will be reported.
-- **Sub-Optimization Threshold (float)**
+- **sub-optimization threshold (float)**
     - `default = 1`
     - Affinity fold-change threshold for affinity-decreasing mutations. Only SNVs with fold change below this threshold will be reported. By default, all SNVs will be reported.
 
