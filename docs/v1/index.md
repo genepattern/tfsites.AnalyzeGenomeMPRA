@@ -81,18 +81,18 @@ If input BED files are provided, the MPRA file is converted from TSV to BED form
 - Can optionally contain other columns, but the five columns below must be listed first
 - Columns:
     - `Chromosome:` name of the chromosome
-    - `Position (1-indexed):` genomic position of the SNV, 1-indexed
+    - `Position:` genomic position of the SNV
     - `Ref:` reference nucleotide
     - `Alt:` alternate nucleotide
     - `P-value:` statistical association between the mutation and a phenotype
 
 ```
-Chromosome    Position (1-indexed)     Ref       Alt     P-value
-chr1          1255143                  C         T       1.43e-08
-chr1          1258206                  AT        A       1.24e-09
-chr1          1259090                  ACG       A       1.75e-08
-chr1          1259093                  T         A       1.05e-08
-chr1          1259424                  T         C       3.17e-09
+Chromosome    Position     Ref       Alt     P-value
+chr1          1255143      C         T       1.43e-08
+chr1          1258205      T         A       1.24e-09
+chr1          1259091      C         A       1.75e-08
+chr1          1259093      T         A       1.05e-08
+chr1          1259424      T         C       3.17e-09
 ```
 
 2. PBM or PFM reference data (.tsv)
@@ -130,7 +130,7 @@ chr2          158364697  158365864
 1. SNV effects of MPRA data (.tsv)
 - Columns
     - `Chromosome:` name of the chromosome
-    - `Position (1-indexed):` position of the SNV, 1-indexed
+    - `Position:` position of the SNV
     - `Ref:` reference nucleotide
     - `Alt:` alternate nucleotide
     - `P-value:` statistical association between genotype and phenotype
@@ -145,12 +145,12 @@ chr2          158364697  158365864
     - `SNV Effect:` the type of SNV effect
 
 ```
-Chromosome    Position (1-indexed)    Ref   Alt    P-value    Overlap-file1.bed    Overlap-file2.bed    Reference Kmer  Alternate Kmer   Site Direction   Reference Affinity   Alternate Affinity   Fold Change    Mutation Type
-chr1          1281643                 G     C      1.53e-09   1                    0                    GGCAAGG         GGGAAGG          -                NaN                  0.120                NaN            denovo          
-chr1          1307327                 A     G      3.93e-09   0                    1                    TTGGAAAC        CTGGAAAC         -                0.097                0.118                1.216          inc
-chr1          1309994                 G     A      8.83e-11   1                    1                    GGGATTC         GAGGATTC         +                0.091                0.093                1.022          inc
-chr1          1325256                 A     C      5.08e-10   0                    0                    CGGTAACA        CGGGAACA         -                NaN                  0.130                NaN            denovo
-chr1          1337900                 A     G      3.52e-12   0                    1                    GTGGAACT        GTGGAGCT         +                0.107                NaN                  NaN            del
+Chromosome    Position    Ref   Alt    P-value    Overlap-file1.bed    Overlap-file2.bed    Reference Kmer  Alternate Kmer   Site Direction   Reference Affinity   Alternate Affinity   Fold Change    Mutation Type
+chr1          1281643     G     C      1.53e-09   1                    0                    GGCAAGG         GGGAAGG          -                NaN                  0.120                NaN            denovo          
+chr1          1307327     A     G      3.93e-09   0                    1                    TTGGAAAC        CTGGAAAC         -                0.097                0.118                1.216          inc
+chr1          1309994     G     A      8.83e-11   1                    1                    GGGATTC         GAGGATTC         +                0.091                0.093                1.022          inc
+chr1          1325256     A     C      5.08e-10   0                    0                    CGGTAACA        CGGGAACA         -                NaN                  0.130                NaN            denovo
+chr1          1337900     A     G      3.52e-12   0                    1                    GTGGAACT        GTGGAGCT         +                0.107                NaN                  NaN            del
 ```
     
   
