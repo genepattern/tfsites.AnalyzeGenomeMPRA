@@ -96,6 +96,7 @@ chr1          1259424      T         C       3.17e-09
 ```
 
 2. PBM or PFM reference data (.tsv)
+- Can provide more than one file 
 - Columns
     - `PBM Kmer:` the sequence of every possible k-mer
     - `PBM Relative Affinity:` the relative affinity of the k-mer normalized to the to the k-mer with the highest MFI
@@ -110,6 +111,7 @@ AAAAAACA     0.12
 ```
 
 3. BED genomic interval data (.tsv)
+- Can provide more than one file 
 - Columns
     - `Chromosome:` name of chromosome
     - `Start:` start coordinate of genomic interval
