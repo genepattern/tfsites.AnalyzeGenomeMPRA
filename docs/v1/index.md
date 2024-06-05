@@ -46,7 +46,7 @@ If input BED files are provided, the MPRA file is converted from TSV to BED form
 - <span style="color: red;">*</span>**MPRA data (.tsv)**
     - File containing a list of mutations from an MPRA experiment, along with their genomic position. It can also contain other information, such as the statistical association between the mutation and phenotype. 
 - <span style="color: red;">*</span>**PBM or PFM reference data (.tsv)**
-    - File containing the normalized PBM or PFM data file for a transcription factor obtained from `DefineTfSites`. It provides the relative affinity/score for every possible k-mer of a length k.
+    - File containing the normalized PBM data obtained from `defineTFBindingSites.from.PBM` or normalized PFM data file from `defineTFBindingSites.from.PFM`.
 - **BED genomic interval data (.bed)**
     - File containing a list of genomic intervals of interest. 
 - <span style="color: red;">*</span>**reference genome (.pkl)**
