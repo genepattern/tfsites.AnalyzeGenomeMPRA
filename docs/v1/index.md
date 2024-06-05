@@ -13,7 +13,7 @@
 
 ## Introduction
 
-`AnalyzeGenomeMPRA` examines single-nucleotide variants (SNVs) from massively parallel reporter assay (MPRA) data and reports their effects on transcription factor binding sites. Possible mutation effects include increasing (or optimizing) the affinity of a binding site, decreasing (or sub-optimizing) the affinity of a binding site, deleting a binding site, or creating a binding site. This analysis is performed on one transcription factor. If BED files are given as an input, it reports whether overlap exists between the genomic intervals in each BED file and the mutations from the MPRA data. 
+`AnalyzeGenomeMPRA` examines single-nucleotide variants (SNVs) from massively parallel reporter assay (MPRA) data and reports their effects on transcription factor binding sites. Possible mutation effects include increasing (or optimizing) the affinity/score of a binding site, decreasing (or sub-optimizing) the affinity/score of a binding site, deleting a binding site, or creating a binding site. This analysis is performed on one transcription factor. If BED files are given as an input, it reports whether overlap exists between the genomic intervals in each BED file and the mutations from the MPRA data. 
 
 
 ## Methodology
@@ -62,7 +62,7 @@ If input BED files are provided, the MPRA file is converted from TSV to BED form
     - If `True`, the genomic coordinates in the input MPRA file are 0-indexed (sequence numbering starts at 0). If `False`, they are 1-indexed (sequence numbering starts at 1). 
 - **SNV effects to report (string)**
     - `Default = all`
-    - Specify one or more mutation types to analyze. Mutations can either increase (optimize) or decrease (sub-optimize) the affinity, delete a binding site, or create a binding site. Therefore, the possible mutation types are `inc`, `dec`, `denovo`, and `del`. By default, this option takes the value `all` if the user would like to analyze all of the listed mutation types.
+    - Specify one or more mutation types to analyze. Mutations can either increase (optimize) or decrease (sub-optimize) the affinity/score, delete a binding site, or create a binding site. Therefore, the possible mutation types are `inc`, `dec`, `denovo`, and `del`. By default, this option takes the value `all` if the user would like to analyze all of the listed mutation types.
 - **optimization threshold (float)**
     - `Default = 1`
     - Fold change threshold for mutations that increase the affinity/score. Only SNVs with fold change above this threshold will be reported. By default, all SNVs will be reported.
@@ -153,9 +153,9 @@ chr2          158364697  158365864
     - `Reference Kmer:` reference binding site
     - `Alternate Kmer:` alternate binding site
     - `Site Direction:` direction of the binding site (+ if it follows the given binding site definition or - if it follows the reverse complement of the binding site definition)
-    - `Reference Affinity/Score:` the affinity of the reference binding site
-    - `Alternate Affinity/Score:` the affinity of the alternate binding site
-    - `Fold Change:` the ratio between ref_aff and alt_aff
+    - `Reference Affinity:` the affinity of the reference binding site
+    - `Alternate Affinity:` the affinity of the alternate binding site
+    - `Fold Change:` the ratio between Reference Affinity and Alternate Affinity
     - `SNV Effect:` the type of SNV effect
 
 ```
