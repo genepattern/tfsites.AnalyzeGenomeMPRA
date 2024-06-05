@@ -142,6 +142,7 @@ chr2          158364697  158365864
 ## Output Files
 
 1. SNV effects of MPRA data (.tsv)
+- Note: if PFM reference data is provided instead of PBM reference data, then the columns `Reference Affinity` and `Alternate Affinity` will instead be labeled `Reference Score` and `Alternate Score` 
 - Columns
     - `Chromosome:` name of the chromosome
     - `Position:` position of the SNV
@@ -155,7 +156,7 @@ chr2          158364697  158365864
     - `Site Direction:` direction of the binding site (+ if it follows the given binding site definition or - if it follows the reverse complement of the binding site definition)
     - `Reference Affinity:` the affinity of the reference binding site
     - `Alternate Affinity:` the affinity of the alternate binding site
-    - `Fold Change:` the ratio between Reference Affinity and Alternate Affinity
+    - `Fold Change:` the ratio between `Reference Affinity` and `Alternate Affinity`
     - `SNV Effect:` the type of SNV effect
 
 ```
