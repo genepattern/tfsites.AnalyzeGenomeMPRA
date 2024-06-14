@@ -5,7 +5,7 @@
         "hidden": false,
         "parameters": [
             "MPRA.data",
-            "PBM/PWM.reference.data",
+            "PBM.or.PFM.reference.data",
             "BED.genomic.interval.data",
 	    "reference.genome",
 	    "SNV.effects.of.MPRA.data.table.output.filename"
