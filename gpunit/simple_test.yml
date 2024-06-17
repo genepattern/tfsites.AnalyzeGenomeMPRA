@@ -11,11 +11,11 @@ name: "tfsites.AnalyzeGenomeMPRA - Basic test"
 module: tfsites.AnalyzeGenomeMPRA
 params:
     MPRA.data: "data/06-input_mpra.tsv"
-    PBM.or.PWM.reference.data: "data/06-input_ets-norm-pbm.tsv"
+    PBM.or.PFM.reference.data: "data/06-input_ets-norm-pbm.tsv"
     reference.genome: "https://datasets.genepattern.org/data/module_support_files/tfsites/hg38-chr2seq-pydict.pkl"
     binding.site.definition: "NNGGAWNN"
     zero-indexed.genomic.coordinates: "FALSE"
-    SNV.effects.to.report: "inc,del,denovo"
+    SNV.effects.to.report: "all"
     SNV.effects.of.MPRA.data.table.output.filename:  "06-output_ets-all-possible-muts.tsv"
     optimization.threshold: 1.3
     suboptimization.threshold: 0.75
