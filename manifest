@@ -162,6 +162,6 @@ privacy=public
 quality=development
 src.repo=https://genepattern.github.io/tfsites.AnalyzeGWAS
 taskDoc=
-taskType=Transciption factor analysis
+taskType=Transcription factor analysis
 userid=ted
 version=Draft initial release
